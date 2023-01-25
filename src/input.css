@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    li a{
+        @apply hover:opacity-70;
+    }
+    
+    .show{
+        @apply fixed backdrop-blur-md h-screen bottom-0 w-1/2 left-0 flex flex-col space-y-10 text-center z-10 origin-top animate-open-menu
+    }
+    
+    .toggle-btn{
+        @apply [&>div::before]:w-full [&>div::before]:rotate-45 [&>div::before]:top-3 [&>div]:bg-transparent [&>div::after]:w-full [&>div::after]:-rotate-45 [&>div::after]:top-3
+    }
+}
